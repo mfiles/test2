@@ -1,0 +1,286 @@
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* .card:nth-child(3n - 1) {
+ margin-right: 50px;
+ margin-left: 50px;
+}
+
+.card:last-child {
+ margin-right: 0px !important;
+} */
+.main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main img {
+  width: auto;
+  max-width: 300px;
+  height: 200px;
+}
+  
+.letter {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  /* border: 1px red solid; */
+  text-align: center;
+  align-content: center;
+}
+
+.envelope-front, .envelope-back {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+.card {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2));
+  filter:         drop-shadow(5px 5px 5px rgba(0,0,0,0.2)); 
+  padding-left: 25px;
+  padding-right: 25px;
+  /* border: 1px black solid; */
+
+  display : flex;
+  align-items : center;
+}
+
+.letter:hover .envelope {
+  transform: rotateY(-180deg);
+}
+
+.letter:hover .envelope-back {
+  /* -webkit-filter: brightness(70%); */
+  transition: all 1s ease;
+}
+
+.letter:hover {
+  cursor: pointer;
+}
+
+.envelope-back {
+  transform: rotateY(180deg);
+}
+
+.date {
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-family: Special Elite;
+  font-size: 18px;
+}
+
+.letter-contents {
+  position: fixed;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 15px;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background: #002E5E;
+  overflow-y: auto;
+}
+
+.letter-contents.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.letter-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Special Elite;
+  font-size: 20px;
+  
+  background: #002E5E;
+  color: white;
+
+  position: sticky;
+  top: 0;
+}
+
+.letter-title {
+  padding-top: 5px;
+}
+
+
+.letter-header input[type=button] {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.letter-header input[type=button]:hover {
+  color: #F3AE3D;
+}
+
+.letter-body {
+  display: flex;
+}
+
+.letter-body > * {
+  background-color: #FCF5E5;
+  height: 70vh;
+  overflow: scroll;
+
+}
+.main-body > * {
+  height: 70vh;
+  overflow: scroll;
+}
+.letter-images {
+  display: block;
+  width: 60%;
+  text-align: center;
+  padding: 20px;
+  
+
+    /* height: 70vh;
+    position: static;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden; */
+    
+    /* overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%; */
+}
+.letter-images img {
+  height: auto;
+  width: 100%;
+}
+
+.letter-transcription {
+    width: 40%;
+    padding: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    font-family: Special Elite;
+    
+    
+    /* height: 70vh;
+    position: static;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden; */
+    
+    /* overflow-y: auto;
+    overflow-x: hidden;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 100%; */
+}
+
+.transcription-title {
+  font-family: Special Elite;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/*  */
+
+
+.letter-1 {
+  display: block;
+  text-align: center;
+}
+
+.letter-1 img {
+  width: 100%;
+}
+
+.transcription-title-1 {
+  font-family: Special Elite;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.transcription-body-1 {
+  font-family: Special Elite;
+  font-weight: normal;
+  line-height: 30px;
+  font-family: Special Elite;
+}
+
+#dragMe {
+  width: 10px;
+  text-align: center;
+  justify-contents: center;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #002E5E;
+  color: white;
+}
+
+#dragMe:hover {
+  cursor: col-resize;
+  color: #F3AE3D;
+}
+
+.icon-wrapper {
+  vertical-align: middle;
+  display: block;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.transcript-1 {
+  padding: 15px;
+  box-sizing: border-box;
+}

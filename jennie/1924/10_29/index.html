@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#002E5E">
+    <script src="https://kit.fontawesome.com/73a149fe57.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Cutive+Mono&family=Inter:wght@300&family=Lato:wght@700&family=Oranienbaum&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>The Morin Files - October 29, 1924</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../letter.css">
+  </head>
+  <body>
+    
+    <!-- Fixed elements - header, navigation -->
+    <div class="header">
+        <img src="../../../images/jennie.jpg" alt="Jennie" class="header-content portrait" draggable="false">
+      <div class="header-content title">
+        <h1>The Morin Files</h1>
+      </div>
+        <img src="../../../images/nico.jpg" alt="Nico" class="header-content portrait" draggable="false">
+      <img src="../../../images/divider.png" class="divider" draggable="false">
+    </div>
+    
+    <div class="nav">
+      <a class="nav-button" href="../../../index.html">Home</a>
+      <div class="dropdown">
+        <div class="nav-button">Jennie's Letters</div>
+        <div class="dropdown-content">
+          <a href="../../../jennie-1924.html">1924</a>
+          <a href="../../../jennie-1925.html">1925</a>
+          <a href="../../../jennie-1926.html">1926</a>
+          <a href="../../../jennie-1927.html">1927</a>
+          <a href="../../../jennie-1936.html">1936</a>
+          <a href="../../../jennie-1937.html">1937</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="nav-button">Nico's Letters</div>
+        <div class="dropdown-content">
+          <a href="../../../nico-1924.html">1924</a>
+          <a href="../../../nico-1925.html">1925</a>
+          <a href="../../../nico-1926.html">1926</a>
+          <a href="../../../nico-1927.html">1927</a>
+          <a href="../../../nico-1936.html">1936</a>
+          <a href="../../../nico-1937.html">1937</a>
+        </div>
+      </div>
+      <a class="nav-button" href="transcripts.html">Letter Transcripts</a>
+      <a class="nav-button" href="other.html">Other Memories</a>
+    </div>
+    <script>
+      $( ".dropdown-content" ).hover(function() {
+        $(this).prev().css({"background-color": "#F3AE3D", "color": "#001a36", "letter-spacing": "1.25px"});
+      }, function() {
+        $(this).prev().css({"background-color": "rgba(0, 0, 0, 0)", "color": "white", "letter-spacing": "normal"});
+      
+      });
+    </script>
+    
+    <!-- Page content -->
+    <div class="main">
+      <div class="main-header">
+        <div class="main-header-wrap">
+          <button type="button" name="back" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+          <label id="back-label" for="back">back</label>
+        </div>
+        <div class="main-header-wrap main-title">
+          <h1>October 29, 1924 - New York, NY</h1>
+        </div>
+        <div class="main-header-wrap">
+          <button type="button" name="transcript" id="show-transcript" value="off"><i class="fa-sharp fa-solid fa-file-lines"></i></button>
+          <label id="transcript-label" for="transcript">show transcript</label>
+        </div>
+      </div>
+      <div class="main-body">
+        
+        <div class="letter">
+          <script>
+            var NUM_IMG = 9;
+            for (let i = 1; i <= NUM_IMG; i++) {
+              document.write('<div class="page-wrap"><img src=p' + i + '.jpeg></div>');
+            }
+          </script>
+        </div>
+        
+        <div class="bar" id="dragMe">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-grip-lines-vertical"></i>
+          </div>
+        </div>
+        
+        <div class="transcript" style="flex: 1 1 0%">
+          <div class="transcription-title">Transcription</div><hr>
+          <div class="transcription-body">
+            Dear Nico,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br>
+            Love,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Jennie
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../letter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#002E5E">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Cutive+Mono&family=Inter:wght@300&family=Lato:wght@700&family=Oranienbaum&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>The Morin Files</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div class="header">
+      <div class="header-content portrait">
+        
+      </div>
+      <div class="header-content title">
+        <h1>The Morin Files</h1>
+      </div>
+      <div class="header-content portrait">
+        
+      </div>
+      <img src="divider.png" class="divider" draggable="false">
+      
+    </div>
+    
+    <div class="nav">
+      <a class="nav-button" href="index.html">Home</a>
+      <div class="dropdown">
+        <div class="nav-button">Jenny's Letters</div>
+        <div class="dropdown-content">
+          <a href="#">1920's</a>
+          <a href="#">1930's</a>
+          <a href="#">1940's</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="nav-button">Nico's Letters</div>
+        <div class="dropdown-content">
+          <a href="#">1920's</a>
+          <a href="#">1930's</a>
+          <a href="#">1940's</a>
+        </div>
+      </div>
+      <a class="nav-button" href="transcripts.html">Letter Transcripts</a>
+      <a class="nav-button" href="other.html">Other Memories</a>
+    </div>
+    <script>
+      $( ".dropdown-content" ).hover(function() {
+        $(this).prev().css({"background-color": "#F3AE3D", "color": "#001a36", "letter-spacing": "1.25px"});
+      }, function() {
+        $(this).prev().css({"background-color": "rgba(0, 0, 0, 0)", "color": "white", "letter-spacing": "normal"});
+      
+      });
+      
+    </script>
+    
+    <!-- <script>
+      
+      $(window).resize(function() {
+        nav = document.getElementsByClassName("nav-button");
+        max_height = 0;
+        for (let i = 0; i < nav.length; i++) {
+          max_height = Math.max(max_height, nav[i].clientHeight - 10);
+        }
+        for (let i = 0; i < nav.length; i++) {
+          nav[i].style.height = max_height + "px";
+        }
+      });
+      
+    </script> -->
+    
+    <div class="main">
+      <h1 style="text-align: center;">OTHER MEMORIES</h1>
+    </div>
+    
+  </body>
+</html>

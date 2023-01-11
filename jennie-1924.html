@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#002E5E">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Cutive+Mono&family=Inter:wght@300&family=Lato:wght@700&family=Oranienbaum&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>The Morin Files - Jennie 1924</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="letters.css">
+  </head>
+  <body>
+    
+    <!-- Fixed elements - header, navigation -->
+    <div class="header">
+        <img src="images/jennie.jpg" alt="Jennie" class="header-content portrait" draggable="false">
+      <div class="header-content title">
+        <h1>The Morin Files</h1>
+      </div>
+        <img src="images/nico.jpg" alt="Nico" class="header-content portrait" draggable="false">
+      <img src="images/divider.png" class="divider" draggable="false">
+    </div>
+    
+    <div class="nav">
+      <a class="nav-button" href="index.html">Home</a>
+      <div class="dropdown">
+        <div class="nav-button">Jennie's Letters</div>
+        <div class="dropdown-content">
+          <a href="jennie-1924.html">1924</a>
+          <a href="jennie-1925.html">1925</a>
+          <a href="jennie-1926.html">1926</a>
+          <a href="jennie-1927.html">1927</a>
+          <a href="jennie-1936.html">1936</a>
+          <a href="jennie-1937.html">1937</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="nav-button">Nico's Letters</div>
+        <div class="dropdown-content">
+          <a href="nico-1924.html">1924</a>
+          <a href="nico-1925.html">1925</a>
+          <a href="nico-1926.html">1926</a>
+          <a href="nico-1927.html">1927</a>
+          <a href="nico-1936.html">1936</a>
+          <a href="nico-1937.html">1937</a>
+        </div>
+      </div>
+      <a class="nav-button" href="transcripts.html">Letter Transcripts</a>
+      <a class="nav-button" href="other.html">Other Memories</a>
+    </div>
+    <script>
+      $( ".dropdown-content" ).hover(function() {
+        $(this).prev().css({"background-color": "#F3AE3D", "color": "#001a36", "letter-spacing": "1.25px"});
+      }, function() {
+        $(this).prev().css({"background-color": "rgba(0, 0, 0, 0)", "color": "white", "letter-spacing": "normal"});
+      
+      });
+    </script>
+    
+    <!-- Page content -->
+    <div class="main">
+      <h1 style="text-align: center;">Jennie - 1924</h1>
+      <div class="letters">
+        <div class="card"><div class="inner-card">
+          <div class="letter">
+            <a href="jennie/1924/05_03/index.html">
+            <div class="envelope">
+              <div class="envelope-front">
+                <img src="jennie/1924/05_03/front.png" alt="">
+              </div>
+              <div class="envelope-back">
+                <img src="jennie/1924/05_03/back.png" alt="back of envelope">
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="date">May 3</div>
+        </div>
+        </div>
+
+        <div class="card"><div class="inner-card">
+          <div class="letter">
+            <a href="jennie/1924/10_29/index.html">
+            <div class="envelope">
+              <div class="envelope-front">
+                <img src="jennie/1924/10_29/front.png" alt="">
+              </div>
+              <div class="envelope-back">
+                <img src="jennie/1924/10_29/back.png" alt="back of envelope">
+              </div>
+            </div>
+            </a>
+          </div>
+          <div class="date">October 29</div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+    
+      $("img").attr("draggable", "false");
+      
+      $(window).on('load', function () {
+        $(".letter img").each(function(i, obj) {
+            if ($(obj).css("width") == $(obj).css("max-width")) {
+              $(obj).css("height", "auto");
+            }
+        });
+        
+        $(".envelope-front img").each(function(i, obj) {
+          let width = $(obj).width() + "px";
+          let height = $(obj).height() + "px";
+          $(obj).parents(".letter").css("height", height);
+          $(obj).parents(".letter").css("width", width);
+          $(obj).parent().next().children("img").css({"width": width, "height": height});
+        });
+      });
+      
+    </script>
+  </body>
+</html>

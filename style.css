@@ -1,0 +1,144 @@
+body {
+  margin: 0px;
+  background-color: #FCF5E5;
+}
+
+.header {
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  background-color: #002E5E;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+.header-content {
+  margin: 15px 35px;
+  font-family: Special Elite; /* todo: Special Elite, Cutive Mono */
+  font-size: 35px;
+  color: #F3AE3D;
+}
+
+.portrait {
+  border: 4px #001a36 solid;
+  background-color: white;
+  height: 150px;
+  width: 115px;
+  border-radius: 50%;
+}
+
+.divider {
+  width: 700px;
+  margin-bottom: 15px;
+  margin-top: -50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #001a36;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-button {
+  border: 1px #F3AE3D solid;
+  margin: 10px 15px;
+  padding: 5px 10px;
+  color: white;
+  font-family: Inter;
+  text-transform: uppercase; /* todo: remove? */
+  cursor: pointer;
+  width: 15vw;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: letter-spacing 0.5s;
+}
+
+.nav-button:hover + .dropdown-content, .dropdown-content:hover {
+  display: block;
+}
+
+.nav-button:hover {
+  background-color: #F3AE3D !important;
+  color: #001a36 !important;
+  letter-spacing: 1.25px !important;
+}
+
+
+.dropdown-content {
+  display: none;
+  margin: -10px 15px;
+  padding: 5px 10px;
+  color: white;
+  font-family: Inter;
+  cursor: pointer;
+  position: absolute;
+  /* z-index: 1; */
+  width: 15vw;
+  border: 1px rgba(0, 26, 54, 0.85) solid;
+  border-bottom-left-radius: 15px;  /* todo: remove? */
+  border-bottom-right-radius: 15px; /* todo: remove? */
+  
+  /* From https://css.glass */
+  background: rgba(0, 26, 54, 0.85);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dropdown-content a {
+  padding: 7px 7px;
+  margin: 7px 0px;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  transition-duration: 0.3s;
+}
+.dropdown-content a:hover {
+    background: rgba(0, 26, 54, 0.85);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /* border: 1px red solid; */
+}
+
+.main {
+  margin: 40px; 
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: bold;
+}
+
+.about {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.about > * {
+  margin: 0px 10px;
+}
+
+.main h1 {
+  margin: 0px;
+  margin-bottom: 3px;
+  font-family: Special Elite; /* Oranienbaum; */
+  font-size: 40px;
+}
+
+#about-image {
+  width: 40vw;
+  border: 2px #001a36 solid;
+}
+
+.left-text {
+  width: 60%;
+}
+
+.image {
+  text-align: right;
+}

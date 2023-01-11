@@ -1,0 +1,145 @@
+.main-body {
+  display: flex;
+  justify-content: center;
+  border: 10px #002E5E solid;
+  background-color: #002E5E;
+}
+
+
+.main-body > * {
+  height: 90vh;
+  overflow: scroll;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Special Elite;
+  font-size: 20px;
+  margin-bottom: 30px;
+  
+  position: sticky;
+  top: 0;
+  
+}
+
+
+.main-header button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #002E5E;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  font-family: Inter;
+  text-transform: uppercase; /* todo: remove? */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition-duration: 0.25s;
+  margin-top: -12px
+}
+
+.main-header button:hover {
+  color: #F3AE3D !important;
+  scale: 1.25;
+}
+
+.main-header button:active {
+  scale: 1;
+}
+
+.main-header-wrap:not(:last-child) {
+ margin-right: 50px;
+}
+
+/* .main-title {
+  padding-top: 10px;
+} */
+
+label {
+  color: white;
+  padding: 3px 5px;
+  font-family: Inter;
+  text-transform: uppercase; /* todo: remove? */
+  font-size: 11px;
+  position: absolute;
+  display: none;
+  border-radius: 3px;
+  -ms-transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  
+  /* From https://css.glass */
+  background: rgba(135, 135, 135, 0.83);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.1px);
+  -webkit-backdrop-filter: blur(12.1px);
+}
+
+#dragMe {
+  width: 10px;
+  text-align: center;
+  justify-contents: center;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #002E5E;
+  color: white;
+  display: none;
+}
+
+#dragMe:hover {
+  cursor: col-resize;
+  color: #F3AE3D;
+}
+
+.letter {
+  height: 100%;
+  width: 100%;
+  /* todo: */
+  text-align: center;
+}
+
+.letter img {
+  width: 100%;
+}
+
+.page-wrap {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.transcription-title {
+  font-family: Special Elite;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.transcription-body {
+  font-family: Special Elite;
+  font-weight: normal;
+  line-height: 30px;
+  font-family: Special Elite;
+}
+
+.transcript {
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #FCF5E5;
+  display: none;
+}
+
+.icon-wrapper {
+  vertical-align: middle;
+  display: block;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
